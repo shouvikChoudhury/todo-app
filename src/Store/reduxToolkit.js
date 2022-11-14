@@ -16,10 +16,7 @@ const addTodoReducer = createSlice({
         completeTodos: (state, action) => {
             return state.map((todo) => {
                 if (todo.id === action.payload) {
-                    return {
-                        ...todo,
-                        complete: true,
-                    };
+                    todo = { ...todo, complete: true };
                 }
                 return todo;
             });
