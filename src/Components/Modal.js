@@ -7,7 +7,7 @@ function Modal({ setOpenModal }) {
         <div className="modalBackground" onClick={(event) => { setOpenModal(false); event.stopPropagation() }}>
             <div className="modalContainer" onClick={(event) => { event.stopPropagation() }}>
                 <div className="titleCloseBtn">
-                    <button >X</button>
+                    <button onClick={() => { setOpenModal(false) }}>X</button>
                 </div>
                 <div className="title">
                     <h1>Add task to todo !</h1>
@@ -16,7 +16,7 @@ function Modal({ setOpenModal }) {
                     <TaskForm setOpenModal={setOpenModal} />
                 </div>
                 <div className="footer">
-                    <button onClick={() => { setOpenModal(false); }} id="cancelBtn">Cancel</button>
+                    <button onClick={() => { setOpenModal(false) }} id="cancelBtn">Cancel</button>
                 </div>
             </div>
         </div>
