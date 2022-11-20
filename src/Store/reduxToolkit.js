@@ -21,6 +21,14 @@ const addTodoReducer = createSlice({
                 return todo;
             });
         },
+        editTodos: (state, action) => {
+            return state.map((todo) => {
+                if (todo.id === action.payload.id) {
+                    todo = { ...todo, name: action.payload.valnam };
+                }
+                return todo;
+            });
+        },
     },
 });
 
@@ -28,5 +36,6 @@ export const {
     addTodos,
     removeTodos,
     completeTodos,
+    editTodos
 } = addTodoReducer.actions;
 export default addTodoReducer.reducer;
