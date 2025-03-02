@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import reduxReducer from "./reduxToolkit";
 
 const configStore = configureStore({
-    reducer: { todolist: reduxReducer },
+    reducer: reduxReducer,
 });
 
 export default configStore;
